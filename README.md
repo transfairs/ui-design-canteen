@@ -1,7 +1,7 @@
 
-# Lorbeerblatt – Canteen Menu App
+# Lorbeerblatt - Canteen Menu App
 
-**Lorbeerblatt** is a modern, mobile-friendly theme for presenting canteen meals, originally created years ago and recently refreshed.
+**Lorbeerblatt** is a modern, light-weight, and mobile-friendly theme for presenting canteen meals, originally created years ago and recently refreshed.
 
 ## 🌍 Live-Demo
 
