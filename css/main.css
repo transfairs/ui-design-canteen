@@ -1,0 +1,396 @@
+/* ===========================
+   Lorbeerblatt Main CSS
+   ===========================
+   Theme: Light/Dark
+   Structure: Header, Navigation, Content, Cards, Forms, Footer
+   =========================== */
+
+/* === Colour variables === */
+:root {
+  --primary-light: #2d6a4f;
+  --primary-dark: #7fbf7f;
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+  --text-light: #222;
+  --text-dark: #f0f0f0;
+  --highlight-light: #ffb703;
+  --highlight-dark: #f9c221;
+}
+
+/* === Base styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* === Global links === */
+a {
+  text-decoration: none;
+}
+body.light-mode a {
+  color: #1b5e20;
+}
+body.dark-mode a {
+  color: #a8e6a2;
+}
+a:hover {
+  opacity: 0.85;
+}
+
+/* === Header === */
+.site-header {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url("../images/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--primary-light);
+  color: white;
+  padding: 2em 1.5em 1em;
+  text-align: center;
+  position: relative;
+}
+body.dark-mode .site-header {
+  background-color: #1f3326;
+  color: var(--text-dark);
+}
+.header-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  position: relative;
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+.logo-text {
+  font-size: 1.8em;
+  margin: 0;
+  color: inherit;
+}
+.page-subtitle {
+  margin-top: 0.3em;
+  font-size: 1.2em;
+  color: inherit;
+}
+#theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+body.light-mode #theme-toggle {
+  color: white;
+}
+body.dark-mode #theme-toggle {
+  color: var(--text-dark);
+}
+
+/* === Navigation === */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+.nav-links a {
+  font-weight: bold;
+}
+body.light-mode .nav-links a {
+  color: white;
+}
+body.dark-mode .nav-links a {
+  color: var(--text-dark);
+}
+
+/* === Content Layout === */
+.content {
+  padding: 2em;
+  max-width: 960px;
+  margin: auto;
+}
+.mensa-section h3 {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.3em;
+}
+body.dark-mode .mensa-section h3 {
+  border-color: var(--highlight-dark);
+}
+
+/* === Dish Cards === */
+.gericht-card {
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  display: flex;
+  gap: 1em;
+  transition: background 0.3s;
+}
+body.light-mode .gericht-card {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+body.dark-mode .gericht-card {
+  background: #1d1d1d;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+.gericht-bild img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+.gericht-details h4 {
+  margin: 0 0 0.5em 0;
+}
+.beschreibung {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+body.light-mode .beschreibung {
+  color: #555;
+}
+body.dark-mode .beschreibung {
+  color: #ccc;
+}
+.bewertung .wert {
+  font-weight: bold;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+}
+.bewertung-kriterien {
+  margin-top: 2em;
+  padding: 1.5em;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+}
+body.light-mode .bewertung-kriterien {
+  background: rgba(0,0,0,0.05);
+}
+.wert-20 {
+  background: var(--highlight-light);
+}
+.wert-90 {
+  background: #60a93e;
+}
+.preis {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+.preis .gast {
+  font-size: 0.9em;
+  display: block;
+}
+body.light-mode .preis .gast {
+  color: #777;
+}
+body.dark-mode .preis .gast {
+  color: #aaa;
+}
+
+/* === Rating === */
+.rating-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5em;
+}
+.rating-list li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.rating-list li strong {
+  min-width: 120px;
+  font-weight: bold;
+}
+.rating {
+  display: inline-block;
+  font-size: 1.7em;
+  cursor: pointer;
+  user-select: none;
+}
+.rating .stars {
+  display: flex;
+}
+.rating .stars span {
+  color: #ccc;
+  margin-right: 0.3em;
+  transition: color 0.2s, transform 0.2s;
+  filter: grayscale(100%);
+}
+.rating .stars span.hovered,
+.rating .stars span.selected {
+  color: var(--primary-light);
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+body.dark-mode .rating .stars span.hovered,
+body.dark-mode .rating .stars span.selected {
+  color: var(--highlight-dark);
+}
+.rating .stars span.hovered {
+  filter: brightness(1.4);
+  transform: scale(1.4);
+}
+
+@media (max-width: 500px) {
+  .rating-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rating-list li strong {
+    min-width: unset;
+  }
+}
+
+/* === Comments and Contact === */
+.kommentare {
+  margin-top: 3em;
+}
+.kommentar {
+  border-top: 1px solid #ccc;
+  padding: 1em 0;
+}
+.kommentar .name {
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #333;
+}
+.kommentar .text {
+  font-size: 0.9em;
+  color: #555;
+}
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
+}
+.contact-list li {
+  margin-bottom: 0.5em;
+}
+body.dark-mode .kommentar {
+  border-color: #444;
+}
+body.dark-mode .kommentar .name {
+  color: #eee;
+}
+body.dark-mode .kommentar .text {
+  color: #bbb;
+}
+.kommentar-form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.kommentar-form input,
+.kommentar-form textarea,
+.kontakt-form input,
+.kontakt-form textarea {
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+}
+body.dark-mode .kommentar-form input,
+body.dark-mode .kommentar-form textarea,
+body.dark-mode .kontakt-form input,
+body.dark-mode .kontakt-form textarea {
+  background: #222;
+  color: white;
+  border: 1px solid #666;
+}
+
+/* === Buttons === */
+a.button,
+.kommentar-form button {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  background-color: var(--highlight-dark);
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+body.light-mode a.button,
+body.light-mode .kommentar-form button,
+.kontakt-form button {
+  background-color: var(--highlight-light);
+  color: #000;
+}
+.kontakt-form button {
+  align-self: flex-start;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.dark-mode a.button,
+body.dark-mode .kommentar-form button {
+  background-color: var(--highlight-dark);
+  color: #000;
+}
+a.button:hover,
+.kommentar-form button:hover {
+  opacity: 0.85;
+}
+
+/* === Footer === */
+.site-footer {
+  text-align: center;
+  padding: 1em;
+  margin-top: 3em;
+}
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+body.light-mode .site-footer {
+  background: var(--primary-light);
+  color: white;
+}
+body.dark-mode .site-footer {
+  background: #1f3326;
+  color: var(--text-dark);
+}
+body.light-mode .site-footer a {
+  color: white;
+}
+body.dark-mode .site-footer a {
+  color: var(--text-dark);
+}

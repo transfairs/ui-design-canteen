@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabbage Rolls in Gravy - Lorbeerblatt</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-wrapper">
+        <img src="images/logo.png" alt="Lorbeerblatt Logo" class="logo-img">
+        <h1 class="logo-text">LORBEERBLATT</h1>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+    <h2 class="page-subtitle">Cabbage Rolls</h2>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Today</a></li>
+        <li><a href="#">Tomorrow</a></li>
+        <li><a href="week.html">Week</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <article class="gericht-card">
+      <div class="gericht-bild">
+        <img src="images/no-image.png" alt="No image available">
+      </div>
+      <div class="gericht-details">
+        <h4>Cabbage rolls in savoury gravy</h4>
+        <p class="beschreibung">With braised cabbage and parsley potatoes.</p>
+        <div class="bewertung">Rating: <span class="wert wert-20">22%</span></div>
+        <div class="preis">€1.81<span class="gast">(Guest: €3.31)</span></div>
+        <div class="zutaten">
+        </div>
+      </div>
+    </article>
+
+    <section class="beschreibung">
+      <h3>Description</h3>
+      <p>Classic German-style cabbage rolls filled with a savoury meat mix, served in rich gravy with braised cabbage and seasoned parsley potatoes.</p>
+    </section>
+
+    <section class="bewertung-kriterien">
+      <h3>Your Rating</h3>
+        <ul class="rating-list">
+          <li><strong>Spiciness:</strong>
+            <span class="rating" data-name="spiciness" data-selected="3">
+              <span class="stars">
+                <span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span>
+              </span>
+            </span>
+          </li>
+          <li><strong>Portion size:</strong>
+            <span class="rating" data-name="portion" data-selected="3">
+              <span class="stars">
+                <span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span>
+              </span>
+            </span>
+          </li>
+          <li><strong>Appearance:</strong>
+            <span class="rating" data-name="appearance" data-selected="3">
+              <span class="stars">
+                <span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span><span>🌿</span>
+              </span>
+            </span>
+          </li>
+        </ul>
+      <a class="button" href="#">Submit Rating</a>
+    </section>
+
+    <section class="kommentare">
+      <h3>Comments</h3>
+
+      <div class="kommentar">
+        <p class="name">Guest 2 wrote on 13/11/2011, 8:13 pm</p>
+        <p class="text">Tasty dish! A bit too salty for my taste though.</p>
+      </div>
+
+      <div class="kommentar">
+        <p class="name">Guest wrote on 13/11/2011, 7:56 pm</p>
+        <p class="text">Loved the gravy and the potatoes were just right.</p>
+      </div>
+
+      <form class="kommentar-form">
+        <h4>Leave a Comment</h4>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="20">
+
+        <label for="text">Comment:</label>
+        <textarea id="text" name="text" rows="6"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="contact.html">Contact</a> | <a href="legal.html">Legal Notice</a></p>
+  </footer>
+  <script src="js/rating.js"></script>
+  <script src="js/darkmode.js"></script>
+</body>
+</html>

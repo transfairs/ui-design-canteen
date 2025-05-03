@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Lorbeerblatt</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-wrapper">
+        <img src="images/logo.png" alt="Lorbeerblatt Logo" class="logo-img">
+        <h1 class="logo-text">LORBEERBLATT</h1>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+    <h2 class="page-subtitle">Contact</h2>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Today</a></li>
+        <li><a href="#">Tomorrow</a></li>
+        <li><a href="week.html">Week</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h3>Get in Touch</h3>
+      <p>If you have questions, feedback or suggestions, feel free to reach out:</p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:info@lorbeerblatt.example">info@lorbeerblatt.example</a></li>
+        <li><strong>Phone:</strong> +49 351 123456</li>
+        <li><strong>Address:</strong> Hauptstraße 12, 01067 Dresden</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Contact Form</h3>
+      <form class="kontakt-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="contact.html">Contact</a> | <a href="legal.html">Legal Notice</a></p>
+  </footer>
+
+  <script src="js/darkmode.js"></script>
+</body>
+</html>
